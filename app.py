@@ -1,6 +1,4 @@
 import streamlit as st
-from multiapp import MultiApp
-# from apps import home, data_stats # import your app modules here
 import page1, page2
 
 st.set_page_config(
