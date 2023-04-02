@@ -158,7 +158,7 @@ class Transformations():
         return expr, mat, mat_list
 
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 class ForwardKinematics(Transformations):
 
     def __init__(self, df):
@@ -189,7 +189,7 @@ class ForwardKinematics(Transformations):
             trnsfm_mat.append(self.pretty_mat(mat))
         return trnsfm_mat
 
-    @st.cache
+    @st.cache(allow_output_mutation=True)
     def link_transfm_mat(self, ref_joint, obs_joint):
         T = []
         T_expr = []
